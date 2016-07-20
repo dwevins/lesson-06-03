@@ -1,7 +1,10 @@
 /* jshint node: true */
 
+require('dotenv').config();
+
 module.exports = function(environment) {
   var ENV = {
+    nasaKey: process.env.NASA_KEY,
     modulePrefix: 'recipe-book',
     environment: environment,
     baseURL: '/',
