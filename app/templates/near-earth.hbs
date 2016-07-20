@@ -1,5 +1,32 @@
+{{log model}}
+
 <h2>there's lots of stuff out there</h2>
 
-{{outlet}}
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Magnitude</th>
+      <th>Orbit</th>
+      <th>Hazardous!</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model.near_earth_objects as |neo|}}
+      <tr>
+        <td>{{neo.name}}</td>
+        <td>{{neo.absolute_magnitude_h}}</td>
+        <td>{{neo.orbital_data.perihelion_distance}}</td>
+        <td>
+          {{#if neo.is_potentially_hazardous_asteroid}}
+            {{!-- <span class="fa fa-fa-check"></span> --}}
+            <img src="http://placecage.com/30/30" alt="">
+          {{/if}}
+        </td>
+        {{log neo}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
 
 {{#link-to "index"}}go home{{/link-to}}

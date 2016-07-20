@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('near-earth', { path: 'near-earth/page-1'});
+  this.route('near-earth', { path: 'near-earth/page/:page'});
 });
 
 export default Router;
