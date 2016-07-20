@@ -1,17 +1,17 @@
-<h1>what did you see</h1>
+<h1>what did you see {{randomString}}</h1>
 
-<form {{action 'newSiting'}}>
+<form {{action 'newSiting' on='submit'}}>
   <p>
     <label>City</label>
-    <input type="text">
+    {{input type="text" value=city}}
   </p>
   <p>
     <label>State</label>
-    <input type="text">
+    {{input type="text" value=state}}
   </p>
   <p>
     <label>AN Rating</label>
-    <input type="text">
+    {{input type="text" value=rating}}
   </p>
 
   <button>Submit</button>
