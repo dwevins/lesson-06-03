@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('near-earth', { path: 'near-earth/page/:page'});
   this.route('aliens-list');
   this.route('alien-new');
+  this.route('alien-edit');
 });
 
 export default Router;
