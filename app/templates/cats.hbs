@@ -6,7 +6,7 @@
 
   <p>
     <label>Claws: </label>
-    {{input type='checkbox' checked=name}}
+    {{input type='checkbox' checked=claws}}
   </p>
 
   <p>
@@ -21,4 +21,12 @@
 
   <button>submit</button>
 </form>
+
+<ul>
+  {{#each model as |cat|}}
+    <li class="cat-list__item {{if cat.friendly "cat-list__item--nice" "cat-list__item--evil"}}" {{action "deleteCat" cat}}>
+      {{ cat.name }} - {{ cat.color }}
+    </li>
+  {{/each}}
+</ul>
 {{outlet}}
