@@ -6,10 +6,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('near-earth', { path: 'near-earth/page/:page'});
-  this.route('aliens-list', { path: 'aliens'});
-  this.route('alien-new', { path: 'aliens/new'});
-  this.route('alien-edit', { path: 'aliens:id'});
+  this.route('near-earth', { path: 'near-earth/page/:page' });
+  this.route('aliens-list', { path: 'aliens' });
+  this.route('alien-new', { path: 'aliens/new' });
+  this.route('alien-edit', { path: 'aliens:id' });
+  this.route('cats', { path: 'cats' });
 });
 
 export default Router;

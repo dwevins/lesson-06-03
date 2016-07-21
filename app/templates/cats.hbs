@@ -1,0 +1,24 @@
+<form {{action "addCat" on='submit'}}>
+  <p>
+    <label>Name: </label>
+    {{input type='text' value=name}}
+  </p>
+
+  <p>
+    <label>Claws: </label>
+    {{input type='checkbox' checked=name}}
+  </p>
+
+  <p>
+    <label>Color: </label>
+    {{input type='text' value=color}}
+  </p>
+
+  <p>
+    <label>Friendly: </label>
+    {{input type='checkbox' checked=freindly}}
+  </p>
+
+  <button>submit</button>
+</form>
+{{outlet}}
